@@ -1,0 +1,36 @@
+.jumbotron {
+	background-color: #ff9937; 
+	color: white;
+	width: 80%;
+	font-family: 'Raleway', sans-serif;
+}
+
+#searchCont {
+	width: 80% ;
+	border-style: solid;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.head {
+	color: white;
+	border: 2px solid #049CDB;
+	background-color: #ec9541;
+	padding: 10px;	
+	margin: 0px;
+}
+
+#results {
+	width: 80% ;
+	border-style: solid;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.resultsCols:first-child {
+    font-weight: bold;
+}
+
+.resultsCols {
+	text-align: center
+}
