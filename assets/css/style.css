@@ -12,10 +12,13 @@
 	margin-bottom: 20px;
 }
 
+.head, #submit-button {
+	background-color: #ec9541;
+}
+
 .head {
 	color: white;
-	border: 2px solid #049CDB;
-	background-color: #ec9541;
+	border: 2px solid #049CDB;	
 	padding: 10px;	
 	margin: 0px;
 }
