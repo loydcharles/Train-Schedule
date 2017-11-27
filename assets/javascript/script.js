@@ -1,29 +1,32 @@
-var config = {
-    apiKey: "AIzaSyCMyhuh9wKfwzvQdIMdmfBglfSGgVM5uKc",
-    authDomain: "loydsdb.firebaseapp.com",
-    databaseURL: "https://loydsdb.firebaseio.com",
-    projectId: "loydsdb",
-    storageBucket: "loydsdb.appspot.com",
-    messagingSenderId: "751193456581"
-};
-
-firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBrUpwsxEuYhvY-LPd4eloIirVBm3sjFmY",
+    authDomain: "loydsdb-e99c8.firebaseapp.com",
+    databaseURL: "https://loydsdb-e99c8.firebaseio.com",
+    projectId: "loydsdb-e99c8",
+    storageBucket: "loydsdb-e99c8.appspot.com",
+    messagingSenderId: "825679351821"
+  };
+  firebase.initializeApp(config);
 
 var database = firebase.database();
 
 $("#submit-button").on("click", function() {
 	event.preventDefault();
-	var trainNameInput   = $("#trainName").val().trim();
-	var destinationInput = $("#destination").val().trim();
+	var trainNameInput      = $("#trainName").val().trim();
+	var destinationInput    = $("#destination").val().trim();
     var firstTrainTimeInput = $("#firstTrain").val().trim();
-	var frequencyInput   = $("#frequency").val().trim();
+	var frequencyInput      = $("#frequency").val().trim();
 
 	database.ref().push({
 		trainName:      trainNameInput,
 		destination:    destinationInput,
         firstTrainTime: firstTrainTimeInput,
-		frequency:      frequencyInput
+		frequency:      frequencyInput,
+        dateAdded:      firebase.database.ServerValue.TIMESTAMP
     });
+
+    console.log(firebase.database.ServerValue.TIMESTAMP);
 });
 
 database.ref().orderByChild("dateAdded").limitToLast(10000).on("child_added", function(snapshot) {

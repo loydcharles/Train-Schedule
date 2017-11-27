@@ -6,20 +6,21 @@
  
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
- <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-
+ <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
  <link rel="stylesheet" href="assets/css/style.css">
  <title>Anytime is Train Time</title>   
  
  <div class="page-header">
  
- <center><div class="jumbotron" >
- <span class="glyphicon glyphicon-home"></span>
-    <h3 class="display-3">Anytime is Train Time</h3></i>
-    <h4>Choo Choo. Chee Chee</h4>
+ <center>
+  <div class="jumbotron" >
+     <span class="glyphicon glyphicon-home"></span>
+        <h3 class="display-3">Anytime is Train Time</h3></i>
+        <h4>Choo Choo. Chee Chee</h4>
+     
+  </div>
  </center>
- </div>
  </head>
  
  <body>
@@ -27,39 +28,36 @@
     <h6 class="head">Current Train Schedule</h6>
     <br>
     <div class=row id="inputResults" class="resultsCols">
-      <div class="col-md-2" id="trainNameDisplay">Train Name<br></div>
-      <div class="col-md-2" id="destinationDisplay">Destination<br></div>
-      <div class="col-md-2" id="frequencyDisplay">Frequency (min)<br></div>
-      <div class="col-md-2" id="nextArrivalDisplay">Next Arrival<br></div>
-      <div class="col-md-2" id="minutesAwayDisplay">Minutes Away<br></div>      
-      <br>
-      <br>
-      <br>
+      <div class="col" id="trainNameDisplay">Train Name<br></div>
+      <div class="col" id="destinationDisplay">Destination<br></div>
+      <div class="col" id="frequencyDisplay">Frequency (min)<br></div>
+      <div class="col" id="nextArrivalDisplay">Next Arrival<br></div>
+      <div class="col" id="minutesAwayDisplay">Minutes Away<br></div>      
     </div>
   </div>
 
   <div class=container id="searchCont">
     <h6 class="head">Add Train</h6>
-    <br>
-    Train Name
-    <br>
+      <br>
+        Train Name
+      <br>
     <div class="input-group">
       <input type="text" class="form-control" id="trainName">
     </div>
     <br>
-    Destination
+      Destination
     <br>
     <div class="input-group">
       <input type="text" class="form-control" id="destination">
     </div>
     <br>
-    First Train Time (HH:mm - military time)
+     First Train Time (HH:mm - military time)
     <br>
     <div class="input-group">
       <input type="text" class="form-control" id="firstTrain">
     </div>
     <br>
-    Frequency (min)
+      Frequency (min)
     <br>
     <div class="input-group">
       <input type="text" class="form-control" id="frequency">
