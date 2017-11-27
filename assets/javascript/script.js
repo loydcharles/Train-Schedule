@@ -7,7 +7,8 @@
     storageBucket: "loydsdb-e99c8.appspot.com",
     messagingSenderId: "825679351821"
   };
-  firebase.initializeApp(config);
+
+firebase.initializeApp(config);
 
 var database = firebase.database();
 
